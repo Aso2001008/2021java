@@ -1,4 +1,5 @@
 public class Game_ship{
+    //箱
     private String name;
     private int hp;
     private int x;
@@ -69,6 +70,4 @@ public class Game_ship{
             return false;
         }
     }
-
-    //
 }

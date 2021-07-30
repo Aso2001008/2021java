@@ -1,12 +1,12 @@
 import java.util.*;
 
 public class Game_game{
+    //フィールド設定
     public static int field_x = 5;
     public static int field_y = 5;
-    public static int ship_cnt = 3;
     public static boolean[][] field = new boolean[field_x][field_y];
-
-
+    //船数
+    public static int ship_cnt = 3;
 
     //タイトル表示
     public static void title(){
@@ -87,7 +87,7 @@ public class Game_game{
         }
     }
 
-    //続けるか
+    //続けるか田舎
     public static boolean next(Game_ship[] s){
         if(s[0].die() && s[1].die() && s[2].die()){
             return false;
@@ -96,29 +96,10 @@ public class Game_game{
         }
     }
 
-    //クリア画面
+    //クリア画面前半(後半はmain)
     public static void gameclear(int t){
         System.out.println("***************************");
         System.out.println("     クリア！やったね！     ");
         System.out.println("　 クリアターン:"+t+"ターン　");
-        //System.out.println("あなたは"+scored(t)+"級");
-        System.out.println("***************************");
     }
-    /*
-    public static String scored(int t){
-        if(t >= 60){
-            return "一般一等兵";
-        }else if(t >= 50){
-            return "　 軍曹 　";
-        }else if(t >= 40){
-            return "　 大佐　 ";
-        }else if(t >= 30){
-            return "　 大将　 ";
-        }else if(t >= 20){
-            return "　 元帥　 ";
-        }else if(t >= 0){
-            return "　　神　　";
-        }
-    }
-    */
 }
